@@ -1,0 +1,200 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="security.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<header>
+    <div class="logo">
+        <a href="#"><img src="Untitled design (3).png" ></a>
+    </div>
+    <div class="links" style="font-weight:bold; font-size:18px;">
+        <a href="../Egyptour-main/New folder/home2.html" class="pd">Home</a>
+        <a href="" class="pd" id="explore-link">Explore</a>
+<ul class="ex material-icons dropdown-icon" id="explore-dropdown">
+    <li style="background-color: #C39126; color: white;">Categories</li>
+    <li><a href="./hist.html">Historical sites</a></li>
+    <li><a href="./meusems.html">Museums & Exhibitions</a></li>
+    <li><a href="./hotels.html">Hotels & Resorts</a></li>
+    <li><a href="./vibes.html">Vibes & Restaurants</a></li>
+</ul>
+<a href="" class="pd" id="contact-link">Contact</a>
+<ul class="exx material-icons dropdown-icon" id="dropdown">
+    <li class="ph"><i class="fas fa-phone"></i>+201011351821</li>
+    <li class="em"><i class="far fa-envelope"></i> <a href="mailto:norhanswidan0@gmail.com">egyptour.team.eg@gmail.com</a></li>
+</ul>
+<a href="about.html" class="pd">About Us</a>
+</div>
+<a href="./favorites.html" ><button class="b justify-content-end"><i class="fa fa-heart fa-xl"style="color: white; margin-left:10px"></i></button></a>
+    <button style="text-decoration: none; margin-right: -35px;" class="b justify-content-end" onclick="toggleMenu()">
+        <i class="fa-solid fa-circle-user fa-xl"></i>
+    </button>
+    <a href="help.html" class="b d-flex justify-content-end" style="margin-right:25px;"><i class="fa-regular fa-circle-question fa-xl" style="color: white;"></i></a>
+                <div class="sub-menu-wrap" id="submenu">
+                    <div class="sub-menu">
+                        <div class="user-info" id="user-info">
+                            <img src="images.jpg" class="rounded-circle" id="user-image" >
+                            <p id="user-name"></p>
+                            <p id="user-email"></p>
+                            <hr>
+                        </div> 
+                        <div class="link" style="background-color:white;">
+                            <a href="person.html" style="text-decoration: none;"><button><i class="fa-regular fa-circle-user me-8"></i><p>General information</p>
+                            </button></a>
+                                    <button onclick="goToPage('security1.html')"><i class="fa-solid fa-key"></i><p>Security</p></button>
+                                    <button onclick="goToPage('favourites.html')"><i class="fa-regular fa-heart"></i><p>Favourites</p></button>
+                                    <button onclick="goToPage('down.html')"><i class="fa-brands fa-google-play"></i><p>Download app</p></button>
+                                    <button onclick="goToPage('help.html')"><i class="fa-regular fa-circle-question"></i><p>Help</p></button>
+                                    <button onclick="goToPage('about.html')"><i style="margin-left:3px;" class="fa-solid fa-exclamation"></i><p style="margin-left:12px;">About us</p></button>
+                                    <hr>
+                                 <button id="signOutButton"><p style="margin-right: 10px;">Sign Out</p><i class="fa-solid fa-right-from-bracket"></i></button>
+                                </div>
+                            </div>
+                        </div>
+</header><br>
+<body style="background-color:#fafafa;">
+<div class="con">
+    <div class="main">
+        <div class="row">
+            <div class="col-md-4 mt-1">
+                <img src="4042356.png" id="placeholder-image" class="rounded-circle">
+            </div>
+            <div class="col-md mt-1 u">
+                <h1>Security</h1>
+                <p style="color:#37474F">Change your setting, set up secure authentication or delete your account.</p>
+                <hr>
+                <span class="inline">Password</span> Change your password regularly to keep your account secure
+                <div class="bl">
+                    <button onclick="showPasswordChangeBox()" style="margin-left:600px;">
+                        Change&nbsp;password
+                    </button>
+                    <div id="passwordChangeBox" class="password-change-box" style="display: none; width:270px;">
+                        <span class="close-btn" onclick="closePasswordChangeBox()">X</span>
+                        <!-- current password -->
+                        <label style="color: #C39126; margin-top:-10px;">Current password</label>
+                        <input id="currentPasswordInput" type="password"
+                               placeholder="Enter current password" style="margin-bottom:4px;">
+                        <button onclick="togglePasswordVisibility('currentPasswordInput')"
+                                style=" background: transparent;margin-left:128px; margin-top:-32px;">
+                            <i class="fa fa-eye-slash" aria-hidden="true"></i>
+                        </button>
+                        <!--confirm password-->
+                        <label style="color: #C39126;">Confirm password</label>
+                        <input id="confirmPasswordInput" type="password"
+                               placeholder="Enter confirm password" style="margin-bottom:4px;">
+                        <button onclick="togglePasswordVisibility('confirmPasswordInput')"
+                                style="margin-left:128px; background:transparent;">
+                            <i class="fa fa-eye-slash" aria-hidden="true"></i>
+                        </button>
+
+                        <!--new password-->
+                        <label style="color: #C39126;">New password</label>
+                        <input id="newPasswordInput" type="password" placeholder="Enter new password"
+                               oninput="checkPasswordLength()">
+                        <button onclick="togglePasswordVisibility('newPasswordInput')"
+                                style="margin-left:128px; background:transparent;">
+                            <i class="fa fa-eye-slash" aria-hidden="true"></i>
+                        </button>
+                        <span id="passwordLengthError" style="color: red; display: none;">at least 8 characters</span>
+                        <div style="margin-top:13px;">
+                            <button onclick="changePassword()"
+                                    style="color:white; margin-top:0.25px; margin-left:-5px;width:70px; background: transparent; background-color: #C39126;">
+                                Submit
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <span class="inline">Active sessions</span>
+                <p style="color:#37474F; margin-left: 130px; margin-top: -23px;">
+                    The process can take up to 10 minutes.
+                <a id="signOutButton" class="ll" style="margin-left:190px;">Sign out</a>
+                </p>
+                <hr>
+                <span class="inline">Delete account</span>
+                <p style="color:#37474F; margin-left:130px; margin-top: -22px;">Permanently delete your Egyptour.com
+                                                                                account
+                    <a href="sign out.html" class="l" style=" margin-left:135px; ">Delete account</a></p>
+                <hr>
+                <button id="discardButton" style="margin-left:480px;">Discard</button>
+                <button id="saveButton" style="margin-left:620px; margin-top: -29px;">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="f" class="container" style="text-align: center;">
+    <img src="Egyp our-1.png" width="170px" style="margin-top:-60px; margin-bottom: -50px;">
+        <ul style="margin-bottom: -25px; margin-top: -5px; margin-left:230px;">
+            <li> <a href="../Egyptour-main/New folder/home2.html" class="light">Home</a></li>
+            <li> <a href="" class="light">Ask a question</a></li>
+            <!-- <li> <a href="" class="light">Our Team</a></li> -->
+            <!-- <li>
+                <a href="#" class="light" id="contact-link">Contact</a>
+                <ul class="ex material-icons dropdown-icon" id="dropdown">
+                    <li class="ph"><i class="fas fa-phone"></i>+201011351821</li>
+                    <li class="em"><i class="far fa-envelope"></i> <a href="mailto:norhanswidan0@gmail.com">egyptour.team.eg@gmail.com</a></li>
+                </ul>
+              </li>  -->
+            <li> <a href="about.html" class="light">About Us</a></li>
+        </ul>
+    <p style="font-weight: 600; color: #C39126; margin-top:12px;">For better experience , download our mobile app</p>
+    <p style="color: #C39126; margin-top: -8px;">Download the app by clicking the link below :</p>
+    <div class="parent d-flex justify-content-center">
+        <div class="child1"  style="margin-top:-15px;">
+            <img src="WhatsApp Image 2024-04-08 at 1.49.19 AM (2).jpeg" alt="" width="150px">
+        </div>
+        <div class="child2" style=" margin-top:-15px">
+            <img src="WhatsApp Image 2024-04-08 at 1.49.19 AM.jpeg" alt="" width="150px" style="margin-top: 7px;">
+        </div>
+    </div>
+    <hr width="50%" style="margin-left: 25%; margin-bottom: -2px;">
+    <p style="color: #C39126; margin-top: 10px;">All copyrights are reserved by 2024 seniors</p>
+</div> 
+<script>
+    function generateRandomPassword(length) {
+    var charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    var password = "";
+    for (var i = 0; i < length; i++) {
+        var randomIndex = Math.floor(Math.random() * charset.length);
+        password += charset[randomIndex];
+    }
+    return password;
+}
+
+function showPasswordChangeBox() {
+    document.getElementById("passwordChangeBox").style.display = "block";
+}
+
+function closePasswordChangeBox() {
+    document.getElementById("passwordChangeBox").style.display = "none";
+}
+
+function checkPasswordLength() {
+    var newPasswordInput = document.getElementById("newPasswordInput");
+    var passwordLengthError = document.getElementById("passwordLengthError");
+    if (newPasswordInput.value.length < 8) {
+        passwordLengthError.style.display = "block";
+    } else {
+        passwordLengthError.style.display = "none";
+    }
+}
+
+function changePassword() {
+    var currentPassword = document.getElementById("currentPasswordInput").value;
+    var newPassword = document.getElementById("newPasswordInput").value;
+
+    if (currentPassword === "") {
+        alert("Please enter your current password.");
+        return;
+    }
+}
+</script>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="person.js"></script> 
+</body>
+</html>

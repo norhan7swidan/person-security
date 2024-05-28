@@ -1,0 +1,165 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="person.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body style="background-color:#fafafa;">
+    <div class="na">
+    <header>
+        <div class="logo">
+            <a href="#"><img src="Untitled design (3).png" ></a>
+        </div>
+        <div class="links" style=" font-weight:bold; font-size:18px;">
+            <a href="../Egyptour-main/New folder/home2.html" class="pd">Home</a>
+            <a href="" class="pd" id="explore-link">Explore</a>
+    <ul class="ex material-icons dropdown-icon" id="explore-dropdown">
+        <li style="background-color: #C39126; color: white;">Categories</li>
+        <li><a href="./hist.html">Historical sites</a></li>
+        <li><a href="./meusems.html">Museums & Exhibitions</a></li>
+        <li><a href="./hotels.html">Hotels & Resorts</a></li>
+        <li><a href="./vibes.html">Vibes & Restaurants</a></li>
+    </ul>
+    <a href="" class="pd" id="contact-link">Contact</a>
+    <ul class="exx material-icons dropdown-icon" id="dropdown">
+        <li class="ph"><i class="fas fa-phone"></i>+201011351821</li>
+        <li class="em"><i class="far fa-envelope"></i> <a href="mailto:egytour.team.eg@gmail.com">egyptour.team.eg@gmail.com</a></li>
+    </ul>
+    <a href="about.html" class="pd">About Us</a>
+</div>
+        <a href="./favorites.html" ><button class="b justify-content-end"><i class="fa fa-heart fa-xl"style="color: white; margin-left:10px"></i></button></a>
+        <button style="text-decoration: none; margin-right: -35px;" class="b justify-content-end" onclick="toggleMenu()">
+            <i class="fa-solid fa-circle-user fa-xl"></i>
+        </button>
+        <a href="help.html" class="b d-flex justify-content-end" style="margin-right:25px;"><i
+            class="fa-regular fa-circle-question fa-xl" style="color: white;"></i></a>
+    <div class="sub-menu-wrap" id="submenu">
+        <div class="sub-menu">
+            <div class="user-info" id="user-info">
+                <img src="images.jpg" class="rounded-circle" id="user-image">
+                <!-- <img src="images.jpg" class="rounded-circle" id="user-image"> -->
+                <p id="user-name"></p>
+                <p id="user-email"></p>
+                <hr>
+            </div>
+                            <div class="link" style="background-color:white;">
+                                        <button id="generalButton"><i class="fa-regular fa-circle-user me-8"></i><p>General information</p>
+                                        </button>
+                                        <button onclick="goToPage('security1.html')"><i class="fa-solid fa-key"></i><p>Security</p></button>
+                                        <button onclick="goToPage('favourites.html')"><i class="fa-regular fa-heart"></i><p>Favourites</p></button>
+                                        <button onclick="goToPage('down.html')"><i class="fa-brands fa-google-play"></i><p>Download app</p></button>
+                                        <button onclick="goToPage('help.html')"><i class="fa-regular fa-circle-question"></i><p>Help</p></button>
+                                        <button onclick="goToPage('about.html')"><i style="margin-left:3px;" class="fa-solid fa-exclamation"></i><p style="margin-left:12px;">About us</p></button>
+                                        <hr>
+                                        <button id="signOutButton"><p style="margin-right: 10px;">Sign Out</p><i
+                                            class="fa-solid fa-right-from-bracket"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+    </header> </div><br>
+    <div class="con">
+    <div class="main">
+        <div class="row">
+            <div class="col-md-4 mt-1">
+                <div class="basic" style="border:1px solid gray; justify-content:center;">
+                    <p style="margin-bottom: -2px;text-align: center;">Basic Information</p>
+                    <img src="4042356.png" id="placeholder-image" class="rounded-circle">
+                    <button id="uploadButton">
+                        <i class="fa-solid fa-cloud-arrow-up"
+                           style="margin-bottom: -12px; margin-right: 2px;  display: flex;"></i></button>
+                    <p style="text-align: center; margin-bottom: 2px; margin-top:-5px;">Upload</p>
+                </div>
+            </div>
+            <div class="col-md-4 mt-1">
+                <form class="fo1" id="userForm1">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                    <label>Name</label><br>
+                    <input type="text" id="user-name-input" name="name" oninput="this.value=this.value.replace(/[^a-zA-Z\u0600-\u06FF\s]/g,'')"><br>
+                    <i class="fa-regular fa-pen-to-square"></i>
+                    <label>Gender</label><br>
+                    <input type="text" id="user-gender-input" name="gender" oninput="this.value=this.value.replace(/[^a-zA-Z\u0600-\u06FF\s]/g,'')"><br>
+                    <i class="fa-regular fa-pen-to-square"></i>
+                    <label>Location</label><br>
+                    <input type="text" id="user-location-input" name="location"><br>
+                    <i class="fa-regular fa-pen-to-square"></i>
+                    <label>Phone Number</label><br>
+                    <input type="number" id="user-phoneNumber-input" name="phoneNumber"><br>
+                </form>
+            </div>
+            <div class="col-md-4 mt-1">
+                <form class="fo" id="userForm2">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                    <label>Nationality</label><br>
+                    <input type="text" id="nationality" name="nationality" oninput="this.value=this.value.replace(/[^a-zA-Z\u0600-\u06FF\s]/g,'')"><br>
+                    <i class="fa-regular fa-pen-to-square"></i>
+                    <label>Date of Birth</label><br>
+                    <input type="text" style="width:199px;" id="dateOfBirth" name="dateOfBirth"><br>
+                    <i class="fa-regular fa-pen-to-square"></i>
+                    <label>Website URL</label><br>
+                    <input type="url" id="user-websiteURL-input" name="websiteURL"><br>
+                    <i class="fa-regular fa-pen-to-square"></i>
+                    <label>Company</label><br>
+                    <input type="text" id="user-company-input" name="company"><br>
+                    <i class="fa-regular fa-pen-to-square"></i>
+                    <label>Other Website</label><br>
+                    <input type="url" id="user-otherWebsite-input" name="otherWebsite"><br>
+                    <button id="discardButton" style="margin-right: 10px; border: none;
+                        width: 120px;
+                        outline: none;
+                        color: #fff;
+                        font-weight:100;
+                        background:#c39126;
+                        border-radius: 30px; 
+                        margin-top: 6px;;">Discard
+                    </button>
+                    <button id="saveButton" style="margin-left: 10px; border: none;
+                        width: 120px;
+                        outline: none;
+                        margin-top: 6px;
+                        color: #fff;
+                        font-weight:100;
+                        background:#c39126;
+                        border-radius: 30px">Save changes
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="f" class="container" style="text-align: center;">
+        <img src="Egyp our-1.png" width="170px" style="margin-top:-60px; margin-bottom: -60px;">
+            <ul style="margin-bottom: -25px; margin-top: -5px; margin-left:230px;">
+                <li> <a href="../Egyptour-main/New folder/home2.html" class="light">Home</a></li>
+                <li> <a href="" class="light">Ask a question</a></li>
+                <!-- <li> <a href="" class="light">Our Team</a></li> -->
+                <!-- <li>
+                    <a href="#" class="light" id="contact-link">Contact</a>
+                    <ul class="ex material-icons dropdown-icon" id="dropdown">
+                        <li class="ph"><i class="fas fa-phone"></i>+201011351821</li>
+                        <li class="em"><i class="far fa-envelope"></i> <a href="mailto:norhanswidan0@gmail.com">egyptour.team.eg@gmail.com</a></li>
+                    </ul>
+                  </li>  -->
+                 <li> <a href="about.html" class="light">About Us</a></li>
+            </ul>
+        <p style="font-weight: 600; color: #C39126; margin-top:15px;">For better experience , download our mobile app</p>
+        <p style="color: #C39126; margin-top: -8px;">Download the app by clicking the link below :</p>
+        <div class="parent d-flex justify-content-center">
+            <div class="child1"  style="margin-top:-20px;">
+                <img src="WhatsApp Image 2024-04-08 at 1.49.19 AM (2).jpeg" alt="" width="150px">
+            </div>
+            <div class="child2" style=" margin-top:-20px">
+                <img src="WhatsApp Image 2024-04-08 at 1.49.19 AM.jpeg" alt="" width="150px" style="margin-top: 7px;">
+            </div>
+        </div>
+        <hr width="50%" style="margin-left: 25%; margin-top: -1px;">
+        <p style="color: #C39126;margin-top:-10px;">All copyrights are reserved by 2024 seniors</p>
+    </div> 
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="person.js"></script>
+</body>
+</html>
